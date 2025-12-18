@@ -14,17 +14,15 @@
 
     - _Requirements: 6.4_
 
-- [-] 2. Core Data Models
+- [x] 2. Core Data Models
 
   - [x] 2.1 Implement src/schema.py with RiskLevel enum and dataclasses
-
-
     - Create RiskLevel enum (HEALTHY, WARNING, CRITICAL, OVER_BUDGET)
     - Create Campaign dataclass with Decimal fields
     - Create CampaignAnalysis dataclass
     - Create AnalysisSnapshot dataclass
     - _Requirements: 1.5, 3.1, 4.1, 4.2, 4.3_
-  - [ ] 2.2 Write property test for Decimal type preservation
+  - [x] 2.2 Write property test for Decimal type preservation
     - **Property 6: Decimal Arithmetic Preservation**
     - **Validates: Requirements 1.5, 4.5**
 
@@ -52,20 +50,17 @@
 
 
 
-  - [ ] 4.1 Implement src/calculator.py with PacingEngine class
+  - [x] 4.1 Implement src/calculator.py with PacingEngine class
     - Implement calculate_rds with Decimal arithmetic and ROUND_HALF_EVEN
     - Implement calculate_spend_percentage
-
     - Implement determine_risk_level with threshold logic
-
     - Implement analyse_campaign combining all calculations
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.5_
-
-
-  - [ ] 4.2 Write property test for RDS formula correctness
+  - [x] 4.2 Write property test for RDS formula correctness
     - **Property 4: RDS Formula Correctness**
     - **Validates: Requirements 3.1, 3.4**
   - [x] 4.3 Write property test for risk classification
+
 
     - **Property 5: Risk Classification Correctness**
     - **Validates: Requirements 4.1, 4.2, 4.3**
@@ -73,14 +68,17 @@
 - [ ] 5. Checkpoint - Verify Core Engine
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 6. Data Validation Module
-  - [ ] 6.1 Implement src/validator.py with DataValidator class
+- [-] 6. Data Validation Module
+  - [x] 6.1 Implement src/validator.py with DataValidator class
+
     - Implement CSV column validation
     - Implement parse_decimal with error handling
     - Implement validate_csv returning ValidationResult
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
+
   - [ ] 6.2 Write property test for CSV parsing
     - **Property 1: CSV Parsing Preserves All Valid Rows**
+
     - **Validates: Requirements 1.1, 1.5**
   - [ ] 6.3 Write property test for invalid value rejection
     - **Property 2: Invalid Monetary Values Are Rejected**
