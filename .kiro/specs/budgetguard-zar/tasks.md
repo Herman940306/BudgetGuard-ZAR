@@ -100,13 +100,18 @@
     - **Property 7: Serialisation Round-Trip**
     - **Validates: Requirements 6.1, 6.2, 6.3**
 
-- [ ] 8. Excel Report Generation Module
-  - [ ] 8.1 Implement src/excel_generator.py with ExcelReporter class
+- [-] 8. Excel Report Generation Module
+
+
+  - [x] 8.1 Implement src/excel_generator.py with ExcelReporter class
+
+
     - Implement generate_report method
     - Implement _create_summary_sheet with aggregate metrics
     - Implement _create_detail_sheet with per-campaign data
     - Implement _apply_risk_formatting with conditional styling
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
+
   - [ ] 8.2 Write unit tests for Excel report structure
     - Verify Finance Summary and Campaign Deep-Dive sheets exist
     - Verify required columns and formatting
