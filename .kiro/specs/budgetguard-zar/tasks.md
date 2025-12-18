@@ -80,16 +80,22 @@
     - **Property 1: CSV Parsing Preserves All Valid Rows**
 
     - **Validates: Requirements 1.1, 1.5**
-  - [ ] 6.3 Write property test for invalid value rejection
+  - [x] 6.3 Write property test for invalid value rejection
+
     - **Property 2: Invalid Monetary Values Are Rejected**
     - **Validates: Requirements 1.2, 1.3**
 
-- [ ] 7. Audit and Serialisation Module
-  - [ ] 7.1 Implement src/audit.py with AuditLogger class
+- [-] 7. Audit and Serialisation Module
+
+
+  - [x] 7.1 Implement src/audit.py with AuditLogger class
+
+
     - Implement serialise_snapshot with Decimal to string conversion
     - Implement deserialise_snapshot with string to Decimal conversion
     - Implement save_to_file and load_from_file
     - _Requirements: 6.1, 6.2, 6.3, 6.4_
+
   - [ ] 7.2 Write property test for serialisation round-trip
     - **Property 7: Serialisation Round-Trip**
     - **Validates: Requirements 6.1, 6.2, 6.3**
