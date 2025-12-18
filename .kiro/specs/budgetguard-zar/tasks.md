@@ -112,7 +112,8 @@
     - Implement _apply_risk_formatting with conditional styling
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ] 8.2 Write unit tests for Excel report structure
+  - [x] 8.2 Write unit tests for Excel report structure
+
     - Verify Finance Summary and Campaign Deep-Dive sheets exist
     - Verify required columns and formatting
     - _Requirements: 5.1, 5.2, 5.3_
