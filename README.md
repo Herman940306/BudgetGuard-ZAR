@@ -1,52 +1,97 @@
-# BudgetGuard ZAR
+🔹 BudgetGuard ZAR
+Deterministic Backend & Automation Engine for Financial‑Grade Budget Control
 
-## Financial Safety Tool for South African Advertising Agencies
-
-**Zero-Overspend Guarantee** — Precision budget monitoring that catches overruns before they happen.
-
----
-
-## Executive Summary
-
-BudgetGuard ZAR is an enterprise-grade financial safety tool engineered specifically for South African advertising agencies managing digital media spend. The system provides real-time budget pacing analysis, calculating Recommended Daily Spend (RDS) values and flagging campaigns at risk of overspend before budget breaches occur.
-
-**Core Value Proposition:**
-- Prevent client budget overruns with proactive risk detection
-- Generate professional Excel reports for stakeholder presentations
-- Maintain auditable JSON snapshots for financial compliance
-- Ensure media buyers set accurate daily budgets in Meta/Google Ads
-
----
-
-## The South African Edge
-
-BudgetGuard ZAR is purpose-built for the South African advertising market with localisation features that generic tools cannot match:
-
-### ZAR VAT-Awareness (15%)
-
-The system natively distinguishes between **Gross Budget** (VAT inclusive) and **Net Platform Spend** (VAT exclusive). This critical distinction ensures that ad spend never accidentally consumes the VAT portion, protecting agency margins and preventing costly reconciliation errors.
+A production‑ready Python system demonstrating precision arithmetic, defensive data engineering, and audit‑safe automation under real‑world financial constraints.
 
 ```
-Gross Budget (Client Invoice):  R 115,000.00
-VAT Component (15%):            R  15,000.00
-Net Platform Spend (Actual):    R 100,000.00  ← This is what goes to Meta/Google
+
+Executive Summary
+BudgetGuard ZAR is a deterministic backend and automation tool designed to prevent budget overspend through mathematically precise pacing logic, rigorous validation, and audit‑ready outputs.
+
+While originally built for South African digital advertising agencies, the system is intentionally engineered around transferable backend reliability patterns applicable to any domain involving money, quotas, or time‑based allocation.
+
 ```
 
-### Banker's Rounding for Financial Integrity
+Why This Matters to Engineering Teams
+This project demonstrates how to:
 
-All monetary calculations use `decimal.Decimal` with `ROUND_HALF_EVEN` (Banker's Rounding) — the same standard used by financial institutions. This eliminates the floating-point precision errors that plague spreadsheet-based solutions and ensures cent-perfect accuracy across thousands of transactions.
+  * Prevent silent financial errors caused by floating‑point arithmetic
 
-### Verified Date Logic
+  * Enforce correctness through deterministic logic and property‑based testing
 
-The date engine has been rigorously tested against edge cases that commonly cause pacing errors:
+  * Design CLI‑driven automation suitable for scheduled pipelines
 
-- **Leap Year Handling**: February 29th correctly identified in leap years (2024, 2028)
-- **Month-End Boundaries**: Last day of month returns exactly 1 day remaining
-- **Inclusive Day Counting**: December 18th in a 31-day month = 14 days remaining (not 13)
+  * Produce audit‑ready artifacts for regulated or high‑risk environments
 
-Every date calculation is backed by property-based tests spanning 200 years of calendar data.
+What This Project Demonstrates
 
----
+  * Backend Engineering: Deterministic business logic, strict data validation, explicit error handling
+
+  * Automation Engineering: CLI tooling, batch processing, reproducible outputs
+
+  * Data Engineering: CSV ingestion, schema enforcement, transformation pipelines
+
+  * Reliability Engineering: Property‑based testing, edge‑case hardening, audit trails
+
+  * Financial Correctness: Decimal arithmetic, banker’s rounding, VAT‑aware accounting
+
+Core Capabilities
+
+  * Real‑time budget pacing analysis with Recommended Daily Spend (RDS)
+
+  * Proactive risk classification before overspend occurs
+
+  * Professional Excel reporting for stakeholders
+
+  * JSON audit snapshots for compliance and traceability
+
+Precision Financial Logic (Why Decimal Matters)
+All monetary calculations use decimal.Decimal with ROUND_HALF_EVEN (banker’s rounding) — the same standard used in financial institutions.
+This eliminates floating‑point drift and ensures cent‑perfect accuracy across thousands of calculations.
+
+Verified Date & Time Logic
+The date engine is hardened against real‑world edge cases:
+
+  * Leap year correctness (e.g., Feb 29 handling)
+
+  * Month‑end boundary conditions
+
+  * Inclusive day counting for pacing accuracy
+
+All date logic is validated using property‑based tests spanning 200 years of calendar data.
+
+Reliability & Testing
+
+  * 101 automated tests
+
+  * 100% pass rate
+
+  * Property‑based tests using Hypothesis
+
+  * Explicit validation of financial and temporal correctness
+
+Validated properties include:
+
+  * Decimal arithmetic preservation
+
+  * Risk classification accuracy
+
+  * VAT‑safe budget separation
+
+  * Audit serialisation round‑trip integrity
+
+Engineering Use Cases Beyond Advertising
+The same architecture applies to:
+
+  * Subscription billing systems
+
+  * Usage‑based pricing engines
+
+  * Budget enforcement for SaaS platforms
+
+  * Financial reporting pipelines
+
+  * Quota and allocation systems
 
 ## Risk Classification
 
